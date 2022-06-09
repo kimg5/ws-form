@@ -1,0 +1,8 @@
+<div [formGroup]="group" >
+    <div>{{props.label}}</div>
+    <ng-template ngFor let-option [ngForOf]='props.options' let-i='index'>
+        <p-radioButton class="{{checkboxClass}}"  [value]="option['value']" [label]="option['label']"
+            [formControlName]='props.key' >
+        </p-radioButton>
+    </ng-template>
+</div>

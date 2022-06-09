@@ -1,0 +1,9 @@
+<div [formGroup]="group" class="text-center">
+    <div>{{props.label}}</div>  
+    <p-knob formControlName="{{props.key}}"
+              [min]='others["min"]'
+              [max]='others["max"]'
+              [step]='others["step"]'
+    >         
+    </p-knob>
+</div>

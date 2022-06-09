@@ -13,6 +13,7 @@ export class WzFormService {
     const group: any = {};
 
     let fields = form.fields;
+
     for (let name in fields) {
       let field = fields[name];
       if (field.type == 'CHECKBOX') {
@@ -25,5 +26,18 @@ export class WzFormService {
           : new FormControl(field.value || '');
     }
     return new FormGroup(group);
+  }
+
+  withLayout(form: WzForm,layout: any){
+    let fields = form.fields;
+    let boxes = layout.boxes;
+    let results : any = [];
+    let i = 0;
+    for (let name in fields) {
+      let field = fields[name];
+      results[i] = {box : boxes[name],field : fields[name]};
+      i++;
+    }
+    return results;  
   }
 }

@@ -1,0 +1,12 @@
+<div [formGroup]="group" [style]='{width: others["width"]}'>
+    <div>{{props.label}}</div>  
+    <p-slider formControlName="{{props.key}}"
+              [min]='others["min"]'
+              [max]='others["max"]'
+              [step]='others["step"]'
+              [orientation]='others["orientation"]'
+              [range]='others["range"]'
+              
+    >         
+    </p-slider>
+</div>

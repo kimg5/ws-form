@@ -1,0 +1,8 @@
+<div [formGroup]="group">
+    <div>{{props.label}}</div>
+    <ng-template ngFor let-option [ngForOf]='props.options' let-i='index'>
+        <p-checkbox class="{{checkboxClass}}" name='props.key' [value]="option['value']" [label]="option['label']"
+            [formControl]='fctrls.controls[i]' [binary]="true">
+        </p-checkbox>
+    </ng-template>
+</div>

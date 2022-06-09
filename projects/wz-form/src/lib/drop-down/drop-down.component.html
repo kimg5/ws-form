@@ -1,0 +1,8 @@
+<div [formGroup]="group">
+    <span class="p-float-label">
+        <p-dropdown class="dropdown" [options]='props.options' [editable]="others['editable']"
+            [placeholder]="others['placeholder']" [showClear]="others['showclear']" formControlName="{{props.key}}">
+        </p-dropdown>
+        <label class="dropdown_label">{{props.label}}</label>
+    </span> 
+</div>

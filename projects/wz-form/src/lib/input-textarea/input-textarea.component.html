@@ -1,0 +1,10 @@
+<div [formGroup]="group" [ngSwitch]="props.labelStyle">
+    <span class="p-float-label" *ngSwitchCase="'FLOAT'">
+      <textarea  id="{{props.key}}" pInputTextarea formControlName="{{props.key}}"></textarea>
+      <label for="{{props.key}}">{{props.label}}</label>
+    </span>
+    <ng-container *ngSwitchDefault>
+      <label for="{{props.key}}">{{props.label}}</label>
+      <textarea  id="{{props.key}}" pInputTextarea formControlName="{{props.key}}"></textarea>
+    </ng-container>
+</div>

@@ -1,0 +1,10 @@
+<div [formGroup]="group" [ngSwitch]="props.labelStyle">
+    <span class="p-float-label" *ngSwitchCase="'FLOAT'">
+        <p-inputMask id="{{props.key}}" formControlName="{{props.key}}" [mask]='others["mask"]'></p-inputMask>
+        <label for="{{props.key}}">{{props.label}}</label>
+    </span>
+    <ng-container *ngSwitchDefault>
+        <label for="{{props.key}}">{{props.label}}</label>
+        <p-inputMask id="{{props.key}}" formControlName="{{props.key}}" [mask]='others["mask"]'></p-inputMask>
+    </ng-container>
+</div>

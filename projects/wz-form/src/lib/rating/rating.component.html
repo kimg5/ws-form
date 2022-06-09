@@ -1,0 +1,8 @@
+<div [formGroup]="group" >
+    <div>{{props.label}}</div>  
+    <p-rating formControlName="{{props.key}}"
+              [stars]='others["stars"]'
+              [cancel]='others["cancel"]'
+    >         
+    </p-rating>
+</div>

@@ -1,0 +1,10 @@
+<div [formGroup]="group" [ngSwitch]="props.labelStyle">
+    <span class="p-float-label" *ngSwitchCase="'FLOAT'">
+      <p-calendar id="{{props.key}}" formControlName="{{props.key}}"></p-calendar>
+      <label for="{{props.key}}">{{props.label}}</label>
+    </span>
+    <ng-container *ngSwitchDefault>
+        <div>{{props.label}}</div>
+        <p-calendar formControlName="{{props.key}}"></p-calendar>
+    </ng-container>
+  </div>

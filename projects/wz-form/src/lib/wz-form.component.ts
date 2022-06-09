@@ -7,18 +7,15 @@ import { WzFormField } from './wz-form-field';
   template: ``,
   styles: []
 })
-export class WzFormComponent implements OnInit {
-
+export class WzFormComponent implements OnInit{
   @Input() props!: WzFormField;
   @Input() group!: FormGroup;
 
   others? : any;
   
-  constructor() { 
+  constructor() {
   }
-  ngAfterContentInit(): void {
-  }
-  
+
   ngOnInit(): void {
      this.others = this.props.others;
   }

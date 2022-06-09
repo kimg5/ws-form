@@ -1,0 +1,10 @@
+<div [formGroup]="group">
+    <label for="{{props.key}}">{{props.label}}</label>
+    <ng-template [ngIf]='isShowButtons'>
+        <p-inputNumber id="{{props.key}}" formControlName="{{props.key}}" [showButtons]="true" [buttonLayout]='arrange' 
+        decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"></p-inputNumber>
+    </ng-template>
+    <ng-template [ngIf]='!isShowButtons'>
+        <p-inputNumber id="{{props.key}}" formControlName="{{props.key}}" ></p-inputNumber>    
+    </ng-template>
+</div>

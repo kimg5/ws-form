@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(1, 100%);
+    column-gap: 5px;
+}
+.dropdown_label {
+    grid-area: 1 / 1 / 1 / 1;
+    place-self: center center;
+}
+.dropdown {
+    grid-area: 1 / 2 / 1 / 8;
+    place-self: center center;
+}
